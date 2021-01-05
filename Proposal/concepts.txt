@@ -1,0 +1,117 @@
+Main Components:
+
+- Implicit/Explicit Intents to go through activities using buttons or images.
+- Navigation Drawer will be on most screens as it is.
+- Notifications and Alarms are used for setting changes or for when a result is found.
+- RecyclerView is used for each list of laptops and desktops.
+- App Settings will offer notification settings if we want to turn it on or off and to change the background colour.
+- RadioButtons, Buttons and other clickable features are used to select an option or access new activities.
+- TextViews are needed for displaying needed components such as titles, descriptions, inputs, etc.
+- A YouTube API will be used for showing videos for the user.
+- A database using SQLite will be used to store PC and laptop data.
+
+
+
+Welcome Screen:
+
+In this screen of the application, ImageViews and TextViews are used to display needed components such as titles, descriptions, inputs, prices etc. In addition, 
+clickable images and Buttons are used to select an option or access new activities. Finally, implicit/explicit intents to go through activities using Buttons.
+
+
+
+
+First Screen:
+
+Basically on this screen, clickable images and clickable buttons are used to select an option or access new activities. ImageView and TextViews are needed to display
+needed components such as titles, descriptions, inputs, prices etc. Also, the navigation menu will be displayed at the top left corner of the screen. Finally, 
+implicit/explicit intents will be used to transfer from activity to activity using Buttons.
+
+
+
+
+Second Screen:
+
+Firstly, RadioButtons and Buttons are used to select an option and access new activities. The ImageViews and TextViews are used to display the needed components
+such as titles, descriptions, inputs, prices etc. Also, the navigation drawer menu will be displayed at the top left corner of the screen. Finally, implicit/explicit 
+intents are needed to go through each activity using Buttons.
+
+
+
+
+Third Screen:
+
+This screen will display Buttons are used to select an option and access new activities. ImageViews and TextViews are used to display needed components such as titles,
+descriptions, inputs, prices etc. In addition, the navigation drawer menu will be displayed at the top left corner of the screen. Finally, implicit/explicit intents to 
+go through activities using Buttons.
+
+
+
+
+Fourth Screen:
+
+RadioButtons and Buttons are used to select an option and access new activities. Also, ImageViews and TextViews are used for displaying needed components such as titles, 
+descriptions, inputs, prices etc. Also, the navigation menu drawer displayed at the top left corner of the screen. Finally, implicit/explicit intents will be used to go
+through activities using Buttons.
+
+
+
+
+Navigation Drawer Menu Screen:
+
+In this screen, the navigation drawer will be displayed at the top left corner of the screen. Also, implicit/explicit intents to go through activities using Buttons.
+
+
+
+
+Result Screen:
+
+A database using SQLite will be used to store the PC or laptop data. In addition, a YouTube API will be used for showing videos based on the final result. Also, ImageViews 
+and TextViews for displaying needed components such as titles, descriptions, inputs, prices etc. Furthermore, the navigation menu will be displayed at the top left corner 
+of the screen. Finally, implicit/explicit intents are needed through activities using Buttons.
+
+
+
+
+All Laptops Screen:
+
+The screen will provide a database using SQLite in order to store laptop data. RecyclerView will be utilized for the list of laptops and desktops. ImageViews and 
+TextViews for displaying needed components such as titles, descriptions, inputs, prices etc. Also, a navigation drawer menu will be displayed at the top left corner of the 
+screen. Furthermore, implicit/explicit intents will be used to go through activities using Buttons. Finally, AlertDialogs will be used to display a message once the user 
+clicks on one of the products to display more information.
+
+
+
+
+All PCs Screen:
+
+The screen will provide a database using SQLite in order to store PC data. RecyclerView will be utilized for the list of laptops and desktops. ImageViews and 
+TextViews for displaying needed components such as titles, descriptions, inputs, prices etc. Also, a navigation drawer menu will be displayed at the top left corner of the 
+screen. Furthermore, implicit/explicit intents will be used to go through activities using Buttons. Finally, AlertDialogs will be used to display a message once the user 
+clicks on one of the products to display more information.
+
+
+
+
+Feedback Screen:
+
+This screen will provide RadioButtons and Buttons, which are used to select an option or access new activities. There will be a navigation menu displayed at the top left
+corner of the screen. Also, a Toast message will appear after when the Button is triggered by the user. Finally, TextViews for displaying needed components such as titles, 
+descriptions, inputs, etc.
+
+
+
+
+About Screen:
+
+This screen will provide a Button, which is used to select an option or access new activities. There will be a navigation menu displayed at the top left corner of the 
+screen. Also, a Toast message will appear after when the Button is triggered by the user. Finally, TextViews for displaying needed components such as titles, descriptions,
+inputs, etc.
+
+
+
+
+Settings Screen:
+
+Firstly, Notifications and Alarms will be implemented for setting changes or for when a result is found. Switch buttons are used to enable and disable options. Also, TextViews
+for displaying needed components such as titles, descriptions, inputs, etc. There is a navigation drawer menu displayed at the top left corner of the screen. A Toast message 
+will appear after when the Button is triggered. The app settings will offer the user to enable/disable notifications and change the colour of the background.

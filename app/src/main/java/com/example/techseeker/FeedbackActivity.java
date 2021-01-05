@@ -1,0 +1,215 @@
+package com.example.techseeker;
+
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
+import android.view.View;
+import android.support.v4.view.GravityCompat;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.MenuItem;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
+
+public class FeedbackActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String FEEDBACK_LOG_TAG = ResultActivity.class.getSimpleName();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_feedback);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+
+    public void launchFeedbackButton(View view) {
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+
+        String launchingMainMessage = "Your feedback has been sent!";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.nav_all_pcs:
+                launchAllPCsActivity();
+                break;
+            case R.id.nav_all_laptops:
+                launchAllLaptopsActivity();
+                break;
+            case R.id.nav_feedback:
+                launchFeedbackActivity();
+                break;
+            case R.id.nav_share:
+                launchShareActivity();
+                break;
+            case R.id.nav_settings:
+                launchSettingsActivity();
+                break;
+            case R.id.nav_about:
+                launchAboutActivity();
+                break;
+            case R.id.nav_restart_quiz:
+                launchAlertDialog();
+                break;
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
+    public void launchAlertDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(FeedbackActivity.this);
+
+        builder.setTitle("Would You Like to Restart the Quiz?");
+
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int position) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int position)
+            {
+                launchFirstQuestionActivity();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+
+
+    public void launchFirstQuestionActivity()
+    {
+        Intent firstQuestionIntent = new Intent(this, FirstQuestionActivity.class);
+        startActivity(firstQuestionIntent);
+
+        String launchingMainMessage = "Here We Go Again!";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the FirstQuestionActivity with Clicked Button.");
+    }
+
+    public void launchResultActivity()
+    {
+        Intent resultIntent = new Intent(this, ResultActivity.class);
+        startActivity(resultIntent);
+
+        String launchingMainMessage = "Home Sweet Home...";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the ResultActivity with Clicked Button.");
+    }
+
+    public void launchAllPCsActivity()
+    {
+        Intent allPCsIntent = new Intent(this, AllPCsActivity.class);
+        startActivity(allPCsIntent);
+
+        String launchingMainMessage = "Here are All the Available PCs...";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the AllPCsActivity with Clicked Button.");
+    }
+
+    public void launchAllLaptopsActivity() {
+        Intent allLaptopsIntent = new Intent(this, AllLaptopsActivity.class);
+        startActivity(allLaptopsIntent);
+
+        String launchingMainMessage = "Here are All the Available Laptops...";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the AllLaptopsActivity with Clicked Button.");
+    }
+
+    public void launchFeedbackActivity() {
+        Intent feedbackIntent = new Intent(this, FeedbackActivity.class);
+        startActivity(feedbackIntent);
+
+        String launchingMainMessage = "Let Us Hear What You Think!";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the FeedbackActivity with Clicked Button.");
+    }
+
+    public void launchShareActivity() {
+        Intent shareIntent = new Intent(this, ShareActivity.class);
+        startActivity(shareIntent);
+
+        String launchingMainMessage = "Tell the World About Our Application!";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the ShareActivity with Clicked Button.");
+    }
+
+    public void launchSettingsActivity() {
+        Intent settingsIntent = new Intent(this, SettingsActivity.class);
+        startActivity(settingsIntent);
+
+        String launchingMainMessage = "Feel Free to Adjust the Application the Way That You Want...";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the SettingsActivity with Clicked Button.");
+    }
+
+    public void launchAboutActivity() {
+        Intent aboutIntent = new Intent(this, AboutActivity.class);
+        startActivity(aboutIntent);
+
+        String launchingMainMessage = "Find Out More About TechSeeker";
+        Toast toastMainMessage = Toast.makeText(this, launchingMainMessage, Toast.LENGTH_SHORT);
+        toastMainMessage.show();
+
+        Log.d(FEEDBACK_LOG_TAG, "Launched the AboutActivity with Clicked Button.");
+    }
+
+}

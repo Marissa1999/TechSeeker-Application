@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdQuestionActivity">
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#9900BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/thirdQuestionContent"
+        android:layout_width="350dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="80dp"
+        android:background="#00BCD4"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/thirdQuestionContent"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background" />
+
+    <TextView
+        android:id="@+id/thirdQuestionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/thirdQuestionTitle"
+        android:textColor="#1A237E"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/thirdQuestionContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <ImageView
+        android:id="@+id/computerCodeImage"
+        android:layout_width="322dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="8dp"
+        android:alpha=".90"
+        app:layout_constraintBottom_toTopOf="@+id/thirdQuestionButton"
+        app:layout_constraintEnd_toEndOf="@+id/budgetSpinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/budgetSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/budgetSpinner"
+        app:layout_constraintVertical_bias="0.037"
+        app:srcCompat="@drawable/spinner_background" />
+
+    <TextView
+        android:id="@+id/budgetLabel"
+        android:layout_width="321dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="#03A9F4"
+        android:gravity="center"
+        android:text="@string/budgetLabel"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/thirdQuestionContent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="@+id/thirdQuestionContent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdQuestionContent" />
+
+    <Button
+        android:id="@+id/thirdQuestionButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="225dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorPrimary"
+        android:onClick="launchResultActivity"
+        android:text="@string/resultButtonText"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/budgetSpinner"
+        style="@android:style/Widget.Spinner"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:dropDownWidth="wrap_content"
+        android:popupBackground="@color/seaBlue"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/budgetLabel"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/budgetLabel"
+        app:layout_constraintTop_toBottomOf="@+id/budgetLabel" />
+
+</android.support.constraint.ConstraintLayout>
+

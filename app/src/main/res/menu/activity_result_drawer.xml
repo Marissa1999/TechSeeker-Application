@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/hardware_information">
+    <menu android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all_pcs"
+            android:icon="@drawable/ic_menu_desktop"
+            android:title="@string/all_pcs_menu_title" />
+        <item
+            android:id="@+id/nav_all_laptops"
+            android:icon="@drawable/ic_menu_laptop"
+            android:title="@string/all_laptops_menu_title" />
+    </menu>
+    </item>
+
+    <item android:title="@string/other_preferences">
+        <menu>
+            <item
+                android:id="@+id/nav_restart_quiz"
+                android:icon="@drawable/ic_menu_restart"
+                android:title="@string/retry_quiz_menu_title" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_feedback"
+                android:title="@string/feedback_menu_title" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share_menu_title" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/settings_menu_title" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_about"
+                android:title="@string/about_menu_title" />
+        </menu>
+    </item>
+
+</menu>
